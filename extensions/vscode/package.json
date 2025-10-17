@@ -84,7 +84,7 @@
       }
     ],
     "configuration": {
-      "title": "Continue",
+      "title": "ITI Assistant",
       "properties": {
         "continue.telemetryEnabled": {
           "type": "boolean",
@@ -151,75 +151,75 @@
     "commands": [
       {
         "command": "continue.applyCodeFromChat",
-        "category": "Continue",
+        "category": "ITI Assistant",
         "title": "Apply code from chat",
         "group": "Continue"
       },
       {
         "command": "continue.acceptDiff",
-        "category": "Continue",
+        "category": "ITI Assistant",
         "title": "Accept Diff",
         "group": "Continue"
       },
       {
         "command": "continue.rejectDiff",
-        "category": "Continue",
+        "category": "ITI Assistant",
         "title": "Reject Diff",
-        "group": "Continue",
+        "group": "ITI Assistant",
         "icon": "$(stop)"
       },
       {
         "command": "continue.acceptVerticalDiffBlock",
-        "category": "Continue",
+        "category": "ITI Assistant",
         "title": "Accept Vertical Diff Block",
         "group": "Continue"
       },
       {
         "command": "continue.rejectVerticalDiffBlock",
-        "category": "Continue",
+        "category": "ITI Assistant",
         "title": "Reject Vertical Diff Block",
         "group": "Continue"
       },
       {
         "command": "continue.focusEdit",
-        "category": "Continue",
+        "category": "ITI Assistant",
         "title": "Add to Edit",
         "group": "Continue"
       },
       {
         "command": "continue.focusContinueInput",
-        "category": "Continue",
+        "category": "ITI Assistant",
         "title": "Add Highlighted Code to Context and Clear Chat",
         "group": "Continue"
       },
       {
         "command": "continue.focusContinueInputWithoutClear",
-        "category": "Continue",
+        "category": "ITI Assistant",
         "title": "Add to Chat",
         "group": "Continue"
       },
       {
         "command": "continue.debugTerminal",
-        "category": "Continue",
+        "category": "ITI Assistant",
         "title": "Debug Terminal",
         "group": "Continue"
       },
       {
         "command": "continue.exitEditMode",
-        "category": "Continue",
+        "category": "ITI Assistant",
         "title": "Exit Edit Mode",
         "group": "Continue"
       },
       {
         "command": "continue.openConfigPage",
-        "category": "Continue",
+        "category": "ITI Assistant",
         "title": "Open Settings",
         "icon": "$(gear)",
         "group": "Continue"
       },
       {
         "command": "continue.toggleTabAutocompleteEnabled",
-        "category": "Continue",
+        "category": "ITI Assistant",
         "title": "Toggle Autocomplete Enabled",
         "group": "Continue"
       },
@@ -230,112 +230,112 @@
       },
       {
         "command": "continue.selectFilesAsContext",
-        "category": "Continue",
+        "category": "ITI Assistant",
         "title": "Select Files as Context",
         "group": "Continue"
       },
       {
         "command": "continue.newSession",
-        "category": "Continue",
+        "category": "ITI Assistant",
         "title": "New Session",
         "icon": "$(add)",
         "group": "Continue"
       },
       {
         "command": "continue.shareSession",
-        "category": "Continue",
+        "category": "ITI Assistant",
         "title": "Share Current Chat Session as Markdown",
         "group": "Continue"
       },
       {
         "command": "continue.viewHistory",
-        "category": "Continue",
+        "category": "ITI Assistant",
         "title": "View History",
         "icon": "$(history)",
         "group": "Continue"
       },
       {
         "command": "continue.viewLogs",
-        "category": "Continue",
+        "category": "ITI Assistant",
         "title": "View History",
         "group": "Continue"
       },
       {
         "command": "continue.clearConsole",
-        "category": "Continue",
+        "category": "ITI Assistant",
         "title": "Clear Console",
         "icon": "$(clear-all)",
         "group": "Continue"
       },
       {
         "command": "continue.navigateTo",
-        "category": "Continue",
+        "category": "ITI Assistant",
         "title": "Navigate to a path",
         "group": "Continue"
       },
       {
         "command": "continue.writeCommentsForCode",
-        "category": "Continue",
+        "category": "ITI Assistant",
         "title": "Write Comments for this Code",
         "group": "Continue"
       },
       {
         "command": "continue.writeDocstringForCode",
-        "category": "Continue",
+        "category": "ITI Assistant",
         "title": "Write a Docstring for this Code",
         "group": "Continue"
       },
       {
         "command": "continue.fixCode",
-        "category": "Continue",
+        "category": "ITI Assistant",
         "title": "Fix this Code",
         "group": "Continue"
       },
       {
         "command": "continue.optimizeCode",
-        "category": "Continue",
+        "category": "ITI Assistant",
         "title": "Optimize this Code",
         "group": "Continue"
       },
       {
         "command": "continue.fixGrammar",
-        "category": "Continue",
+        "category": "ITI Assistant",
         "title": "Fix Grammar / Spelling",
         "group": "Continue"
       },
       {
         "command": "continue.codebaseForceReIndex",
-        "category": "Continue",
+        "category": "ITI Assistant",
         "title": "Codebase Force Re-Index",
         "group": "Continue"
       },
       {
         "command": "continue.rebuildCodebaseIndex",
-        "category": "Continue",
+        "category": "ITI Assistant",
         "title": "Rebuild codebase index",
         "group": "Continue"
       },
       {
         "command": "continue.docsIndex",
-        "category": "Continue",
+        "category": "ITI Assistant",
         "title": "Docs Index",
         "group": "Continue"
       },
       {
         "command": "continue.docsReIndex",
-        "category": "Continue",
+        "category": "ITI Assistant",
         "title": "Docs Force Re-Index",
         "group": "Continue"
       },
       {
         "command": "continue.focusContinueInput",
-        "category": "Continue",
+        "category": "ITI Assistant",
         "title": "Focus Continue Chat",
         "group": "Continue"
       },
       {
         "command": "continue.enterEnterpriseLicenseKey",
-        "category": "Continue",
+        "category": "ITI Assistant",
         "title": "Enter Enterprise License Key",
         "group": "Continue"
       },
@@ -345,38 +345,38 @@
       },
       {
         "command": "continue.nextEditWindow.hideNextEditSuggestion",
-        "category": "Continue",
+        "category": "ITI Assistant",
         "title": "Hide Next Edit Suggestion"
       },
       {
         "command": "continue.nextEditWindow.acceptNextEditSuggestion",
-        "category": "Continue",
+        "category": "ITI Assistant",
         "title": "Accept Next Edit Suggestion"
       },
       {
         "command": "continue.forceNextEdit",
-        "category": "Continue",
+        "category": "ITI Assistant",
         "title": "Continue: Force Next Edit"
       },
       {
         "command": "continue.acceptJump",
-        "category": "Continue",
+        "category": "ITI Assistant",
         "title": "Continue: Accept Jump Suggestion"
       },
       {
         "command": "continue.rejectJump",
-        "category": "Continue",
+        "category": "ITI Assistant",
         "title": "Continue: Reject Jump Suggestion"
       },
       {
         "command": "continue.generateRule",
-        "category": "Continue",
+        "category": "ITI Assistant",
         "title": "Generate Rule",
         "group": "Continue"
       },
       {
         "command": "continue.openInNewWindow",
-        "category": "Continue",
+        "category": "ITI Assistant",
         "title": "Open in new window",
         "group": "Continue"
       }
@@ -538,7 +538,7 @@
       "editor/title/run": [
         {
           "command": "continue.rejectDiff",
-          "group": "Continue",
+          "group": "ITI Assistant",
           "when": "continue.streamingDiff"
         }
       ],
@@ -549,7 +549,7 @@
         },
         {
           "command": "continue.focusEdit",
-          "group": "Continue",
+          "group": "ITI Assistant",
           "when": "!editorReadonly"
         }
       ],
@@ -604,8 +604,8 @@
       "activitybar": [
         {
           "id": "continue",
-          "title": "Continue",
-          "icon": "media/sidebar-icon.png"
+          "title": "ITI Assistant",
+          "icon": "media/iti-logo.png"
         }
       ],
       "panel": [
@@ -622,7 +622,7 @@
           "type": "webview",
           "id": "continue.continueGUIView",
           "name": "Continue",
-          "icon": "media/sidebar-icon.png",
+          "icon": "media/iti-logo.png",
           "visibility": "visible"
         }
       ],
