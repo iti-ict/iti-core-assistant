@@ -46,9 +46,7 @@ jobs:
 
       # Empaquetar desde la subcarpeta correcta
       - name: Package VSIX
-        run: |
-          cd extensions/vscode
-          vsce package --out ../../continue-${{ steps.version.outputs.version }}.vsix
+        run: vsce package --out ../../continue-${{ steps.version.outputs.version }}.vsix
 
       # Artifact siempre
       - name: Upload VSIX artifact
