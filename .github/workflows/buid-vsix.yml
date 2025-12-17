@@ -38,16 +38,22 @@ jobs:
       - name: Extract VSIX version
         id: vsix
         run: |
+          echo "VSIX files:"
+          ls -l extensions/vscode/build
+      
           VSIX_PATH=$(ls extensions/vscode/build/*.vsix | head -n 1)
           VSIX_FILE=$(basename "$VSIX_PATH")
           VERSION=${VSIX_FILE#continue-}
           VERSION=${VERSION%.vsix}
+      
+          echo "vsix_path=$VSIX_PATH" >> $GITHUB_OUTPUT
+          echo "version=$VERSION" >> $GITHUB_OUTPUT
 
       # Release SOLO en ejecución manual
       - name: Create GitHub Release
         if: github.event_name == 'workflow_dispatch'
         uses: softprops/action-gh-release@v2
         with:
-           tag_name: v${{ steps.vsix.outputs.version }}
-           name: ${{ steps.vsix.outputs.version }}
-           files: ${{ steps.vsix.outputs.vsix_path }}
+          tag_name: v${{ steps.vsix.outputs.version }}
+          name: ${{ steps.vsix.outputs.version }}
+          files: ${{ steps.vsix.outputs.vsix_path }}
