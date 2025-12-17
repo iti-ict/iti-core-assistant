@@ -22,9 +22,16 @@ jobs:
         with:
           node-version: 20
           cache: npm
-
+          
+       # deps del monorepo
       - name: Install dependencies
         run: npm ci
+
+      # deps de la extensión VS Code
+      - name: Install VS Code extension dependencies
+        run: |
+          cd extensions/vscode
+          npm ci
         
       # Leer versión desde la extensión VS Code
       - name: Read extension version
