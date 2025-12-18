@@ -1,3 +1,7 @@
+/**
+ * Modificado por ITI el 01/10/2025.
+ */
+
 /* eslint-disable @typescript-eslint/naming-convention */
 import * as fs from "node:fs";
 
@@ -478,6 +482,74 @@ const getCommandsMap: (
     },
     "continue.applyCodeFromChat": () => {
       void sidebar.webviewProtocol.request("applyCodeFromChat", undefined);
+    },
+    "continue.toggleFullScreen": async () => {
+      focusGUI();
+
+      const sessionId = await sidebar.webviewProtocol.request(
+        "getCurrentSessionId",
+        undefined,
+      );
+      // Check if full screen is already open by checking open tabs
+      const fullScreenTab = getFullScreenTab();
+
+      if (fullScreenTab && fullScreenPanel) {
+        // Full screen open, but not focused - focus it
+        fullScreenPanel.reveal();
+        return;
+      }
+
+      // Clear the sidebar to prevent overwriting changes made in fullscreen
+      vscode.commands.executeCommand("continue.newSession");
+
+      // Full screen not open - open it
+      captureCommandTelemetry("openFullScreen");
+
+      // Create the full screen panel
+      let panel = vscode.window.createWebviewPanel(
+        "continue.continueGUIView",
+        "ITI Assistant",
+        vscode.ViewColumn.One,
+        {
+          retainContextWhenHidden: true,
+          enableScripts: true,
+        },
+      );
+      fullScreenPanel = panel;
+
+      // Add content to the panel
+      panel.webview.html = sidebar.getSidebarContent(
+        extensionContext,
+        panel,
+        undefined,
+        undefined,
+        true,
+      );
+
+      const sessionLoader = panel.onDidChangeViewState(() => {
+        vscode.commands.executeCommand("continue.newSession");
+        if (sessionId) {
+          vscode.commands.executeCommand(
+            "continue.focusContinueSessionId",
+            sessionId,
+          );
+        }
+        panel.reveal();
+        sessionLoader.dispose();
+      });
+
+      // When panel closes, reset the webview and focus
+      panel.onDidDispose(
+        () => {
+          sidebar.resetWebviewProtocolWebview();
+          vscode.commands.executeCommand("continue.focusContinueInput");
+        },
+        null,
+        extensionContext.subscriptions,
+      );
+
+      vscode.commands.executeCommand("workbench.action.copyEditorToNewWindow");
+      vscode.commands.executeCommand("workbench.action.closeAuxiliaryBar");
     },
     "continue.openConfigPage": () => {
       vscode.commands.executeCommand("continue.navigateTo", "/config", false);
