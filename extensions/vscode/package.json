@@ -1,6 +1,6 @@
 {
   "name": "continue",
-  "icon": "media/icon.png",
+  "icon": "media/iti-logo.png",
   "author": "ITI Core Assistant Dev, Inc",
   "version": "1.3.28",
   "repository": {
@@ -21,7 +21,7 @@
   "displayName": "ITI Core Assistant - open-source AI code agent",
   "pricing": "Free",
   "description": "The leading open-source AI code agent",
-  "publisher": "ITI Core Assistant",
+  "publisher": "ITICoreAssistant",
   "engines": {
     "vscode": "^1.70.0",
     "node": ">=20.19.0"
@@ -607,7 +607,7 @@
         {
           "id": "continue",
           "title": "ITI Core Assistant",
-          "icon": "media/sidebar-icon.png"
+          "icon": "media/iti-logo.png"
         }
       ],
       "panel": [
@@ -624,7 +624,7 @@
           "type": "webview",
           "id": "continue.continueGUIView",
           "name": "ITI Core Assistant",
-          "icon": "media/sidebar-icon.png",
+          "icon": "media/iti-logo.png",
           "visibility": "visible"
         }
       ],
