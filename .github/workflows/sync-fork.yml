@@ -1,7 +1,7 @@
-name: Sync Fork with Upstream
+name: Sync Fork with Upstream (Semanalmente)
 on:
   schedule:
-    - cron: '0 0 * * *'  # Runs daily at midnight UTC
+    - cron: '0 0 * * 1'  # Lunes a medianoche UTC
   workflow_dispatch:  # Allows manual triggering
 
 jobs:
